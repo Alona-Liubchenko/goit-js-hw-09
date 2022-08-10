@@ -3,6 +3,13 @@ function getRandomHexColor() {
 }
 
 const refs = {
-  startButton: document.querySelector('button[data - start]'),
-  stopButton: document.querySelector('button[data - stop]'),
+  startBtn: document.querySelector('button[data - start]'),
+  stopBtn: document.querySelector('button[data - stop]'),
+  bodyRef: document.body,
 };
+refs.startBtn.addEventListener('click', onstartBtn);
+refs.stopBtn.addEventListener('click', onstopBtn);
+let timerId = null;
+function onstartBtn() {}
+
+function onstopBtn() {}
