@@ -47,8 +47,8 @@ const timer = {
       const time = convertMs(deltaTime);
       updateClockface(time);
       //   console.log('currentTime', currentTime);
-      console.log(`${days} : ${hours} : ${minutes} : ${seconds}`);
-      if (deltaTime === 0) {
+      // console.log(`${days}:${hours}:${minutes}:${seconds}`);
+      if (deltaTime < 1000) {
         clearInterval(this.timerID);
         this.isActive = false;
       }
@@ -85,9 +85,9 @@ function convertMs(ms) {
   return { days, hours, minutes, seconds };
 }
 
-function updateClockface({ days, hours, mins, secs }) {
+function updateClockface({ days, hours, minutes, seconds }) {
   refs.daysEl.textContent = days;
   refs.hoursEl.textContent = hours;
-  refs.minutesEl.textContent = mins;
-  refs.secondsEl.textContent = secs;
+  refs.minutesEl.textContent = minutes;
+  refs.secondsEl.textContent = seconds;
 }
